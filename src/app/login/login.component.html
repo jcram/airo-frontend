@@ -1,0 +1,22 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card fxFlex="25">
+    <mat-toolbar color="primary"> AIRO Login </mat-toolbar>
+    <form [formGroup]="form" fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+      <mat-form-field >
+        <mat-label>Email</mat-label>
+        <input matInput type="email" required email="true" formControlName="email" placeholder="Email">
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" required type="password" placeholder="Password">
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" (click)="submit()"
+      >Login </button>
+    </form>
+
+    <mat-error fxLayoutAlign="center">{{message}}</mat-error>
+  </mat-card>
+
+</div>
